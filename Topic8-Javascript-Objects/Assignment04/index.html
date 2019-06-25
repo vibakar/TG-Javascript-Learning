@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 04</title>
+</head>
+<body>
+	<h1>Assignment 04</h1>
+	<p>Foreground color and background color will change based on your input</p>
+	<script>
+		function promptUser() {
+			var bgColor = prompt("Enter the background color");
+			var fgColor = prompt("Enter the foreground color");
+
+			document.body.style.background = bgColor;
+			document.body.style.color = fgColor;
+			
+			setTimeout(function() {
+				if(bgColor != null && fgColor != null) {
+					promptUser();
+				}
+			}, 1000)
+		}
+
+		promptUser();		
+	</script>
+</body>
+</html>

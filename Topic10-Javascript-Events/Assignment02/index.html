@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 02</title>
+	<style>
+		.image {
+			height: 150px;
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Assignment 02</h1>
+	<div class="div1">
+		<img class="image" id="img1" src="img1.png" onmouseover="changeImg1()" onmouseleave="changeBackImg1()">
+	</div>
+	<br>
+	<div>
+		<img class="image" id="img2" src="img2.jpg" onmouseover="changeImg2()" onmouseleave="changeBackImg2()">
+	</div>
+	<br>
+	<div>
+		<img class="image" id="img3" src="img3.jpg" onmouseover="changeImg3()" onmouseleave="changeBackImg3()">
+	</div>
+	<script>
+		function changeImg1() {
+			var element = document.getElementById("img1"); 
+  			element.setAttribute("src", "img11.jpg"); 
+		}
+		function changeBackImg1() {
+			var element = document.getElementById("img1"); 
+  			element.setAttribute("src", "img1.png"); 
+		}
+		function changeImg2() {
+			var element = document.getElementById("img2"); 
+  			element.setAttribute("src", "img22.jpg"); 
+		}
+		function changeBackImg2() {
+			var element = document.getElementById("img2"); 
+  			element.setAttribute("src", "img2.jpg"); 
+		}
+		function changeImg3() {
+			var element = document.getElementById("img3"); 
+  			element.setAttribute("src", "img33.jpg"); 
+		}
+		function changeBackImg3() {
+			var element = document.getElementById("img3"); 
+  			element.setAttribute("src", "img3.jpg"); 
+		}
+	</script>
+</body>
+</html>

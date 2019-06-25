@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 01</title>
+	<style>
+		table, tr, td {
+			border: 1px solid black;
+		}
+		.width-100 {
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Assignment 01</h1>
+	<table>
+		<tr>
+			<td colspan="3"><input type="text" id="screen" class="width-100" disabled></td>
+		</tr>
+		<tr>
+			<td><button value="1" onclick="onChange(this.value)">1</button></td>
+			<td><button value="2" onclick="onChange(this.value)">2</button></td>
+			<td><button value="3" onclick="onChange(this.value)">3</button></td>
+		</tr>
+		<tr>
+			<td><button value="4" onclick="onChange(this.value)">4</button></td>
+			<td><button value="5" onclick="onChange(this.value)">5</button></td>
+			<td><button value="6" onclick="onChange(this.value)">6</button></td>
+		</tr>
+		<tr>
+			<td><button value="7" onclick="onChange(this.value)">7</button></td>
+			<td><button value="8" onclick="onChange(this.value)">8</button></td>
+			<td><button value="9" onclick="onChange(this.value)">9</button></td>
+		</tr>
+		<tr>
+			<td><button value="0" onclick="onChange(this.value)">0</button></td>
+			<td><button value="+" onclick="onChange(this.value)">+</button></td>
+			<td><button value="-" onclick="onChange(this.value)">-</button></td>
+		</tr>
+		<tr>
+			<td><button value="*" onclick="onChange(this.value)">*</button></td>
+			<td><button value="/" onclick="onChange(this.value)">/</button></td>
+			<td><button value="=" onclick="result()">=</button></td>
+		</tr>
+	</table>
+	<script>
+		var element = document.getElementById("screen");
+		var input = '';
+		function onChange(val) {
+			input+= val;
+			element.value = input;
+		}
+		function result() {
+			element.value = input = eval(input);
+		}
+	</script>
+</body>
+</html>

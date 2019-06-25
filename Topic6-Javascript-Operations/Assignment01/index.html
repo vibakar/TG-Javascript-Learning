@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 01</title>
+</head>
+<body>
+	<h1>Assignment 01</h1>
+	<script>
+		function possibilities(){
+		  var arr = ["1"];
+		  var possibilities;
+		  for(var i = 2; i <= 9; i++){
+		    possibilities = [];
+		    arr.forEach(function(x){
+		      possibilities.push(x + i, x + " +" + i, x + " -" + i);
+		    });
+		    arr = possibilities;
+		  }
+		 
+		  return possibilities.filter(function(possible){
+		    return possible.split(" ").reduce(function(x,y){
+		      return x/1+y/1;
+		    }) == 100;
+		  })
+		  .map(function(x){
+		    return x.replace(/([+-])/g,'$1 ');
+		  });
+		}
+		var arr = possibilities();
+		for(var i = 0; i < arr.length; i++) {
+			document.write(arr[i]);
+			document.write("<br>");
+		}
+	</script>
+</body>
+</html>

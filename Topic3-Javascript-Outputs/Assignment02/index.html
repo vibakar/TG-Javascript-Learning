@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 02</title>
+</head>
+<body>
+	<h1>Assignment 02</h1>
+	<script>
+		var sentence = "India is my country";
+		var splitSentence = sentence.split(' ');
+		var arr = [];
+		for(var i = 0; i < splitSentence.length; i++) {
+			arr.push(splitSentence[i].charAt(0).toUpperCase() + splitSentence[i].slice(1));
+		}
+		document.write(arr.join(' '));
+		console.log(arr.join(' '));
+	</script>
+</body>
+</html>

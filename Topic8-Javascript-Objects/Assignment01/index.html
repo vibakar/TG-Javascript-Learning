@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 01</title>
+</head>
+<body>
+	<h1>Assignment 01</h1>
+	<script>
+		var cd = {
+			name: 'All time radio hits',
+			publisher: 'Udit Narayanan',
+			price: 200
+		}
+
+		function displayAllDetails() {
+			var tax = (cd.price/100)*10;
+			var discount = (cd.price/100)*3;
+
+			var finalPrice = cd.price + tax - discount;
+			document.write(cd.name + " published by " + cd.publisher + " is selling at a price of Rs." + finalPrice);
+		}
+		displayAllDetails();
+	</script>
+</body>
+</html>

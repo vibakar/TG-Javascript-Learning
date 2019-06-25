@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 01</title>
+</head>
+<body>
+	<h1>Assignment 01</h1>
+	<script>
+		var a = 5;
+		var b = 0;
+		try {
+			if(b != 0) {
+				var division = a/b;
+				document.write(division);
+			} else {
+				throw Error("Denominator cannot be 0");
+			}
+		} catch(error) {
+			document.write(error);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 01</title>
+</head>
+<body>
+	<h1>Assignment 01</h1>
+	<script>
+		var word = "India";
+
+		function findOccurance() {
+			var letter = 'i';
+			var count = 0;
+			var splitWord = word.split('');
+			for(var i = 0; i < splitWord.length; i++) {
+				if(splitWord[i].toLowerCase() == letter) {
+					count++;
+				}
+			}
+			document.write(count);
+		}
+		findOccurance();
+	</script>
+</body>
+</html>

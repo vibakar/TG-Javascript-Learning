@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment01</title>
+</head>
+<body>
+	<h1>Assignment 01</h1>
+	<script>
+		/*A number that is divisible only by itself and 1 is a prime number.
+		  Here we are checking whether the number is prime or not by doing modulo,
+		  if reminder is not zero, then it is prime number*/
+
+		function isPrime(num) {
+		    if(num < 2) return false;
+		    for (var i = 2; i < num; i++) {
+		        if(num%i == 0) {
+		            return false;
+		        }
+		    }
+		    return true;
+		}
+
+		//This function will run the foor loop untill it reaches the user input
+		//This function internally calls another function to check the number is prime or not
+		function sortPrime(num) {
+		  var primeNum = [];
+		  for (var i = 0; i <= num; i++) {
+		    if(isPrime(i)) {
+		    	primeNum.push(i);
+		    }
+		  }
+		  document.write(primeNum);
+		}
+
+		sortPrime(23);
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 02</title>
+</head>
+<body>
+	<h1>Assignment 02</h1>
+	<script>
+	function bubble(arr, callback) {
+	  function compare(a, b) {
+	   return a - b;
+	  } 
+	  var min = 0;
+	  var index = 0;
+	  var temp = 0;
+
+	  callback = callback || compare;
+
+	  for (var i = 0; i < arr.length; i += 1) {
+	    index = i;
+	    min = arr[i];
+	    for (var j = i + 1; j < arr.length; j += 1) {
+	      if (callback(min, arr[j]) > 0) {
+	        min = arr[j];
+	        index = j;
+	      }
+	    }
+	    temp = arr[i];
+	    arr[i] = min;
+	    arr[index] = temp;
+	  }
+	  return arr;
+	}
+
+	function quick(arr) {
+		if (arr.length <= 1) { 
+			return arr;
+		} else {
+			var left = [];
+			var right = [];
+			var newArray = [];
+			var pivot = arr.pop();
+			var length = arr.length;
+			for (var i = 0; i < length; i++) {
+				if (arr[i] <= pivot) {
+					left.push(arr[i]);
+				} else {
+					right.push(arr[i]);
+				}
+			}
+			return newArray.concat(quick(left), pivot, quick(right));
+		}
+	}
+	document.write("Bubble Sort : ", bubble([5, 10, 7, -5, 9, -1, 6], function(a, b) { return a - b; }));
+	document.write("<br>");
+	document.write("Quick Sort : " + quick([10, -8, -4, 5, 3, 0, 7 ]));
+	</script>
+</body>
+</html>

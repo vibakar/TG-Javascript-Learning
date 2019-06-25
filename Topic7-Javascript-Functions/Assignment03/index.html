@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 03</title>
+</head>
+<body>
+	<h1>Assignment 03</h1>
+	<script>
+		var numbers = [1, 2, 3, 4, 5, 6];
+		var userInput = prompt("Enter the number to get the last 'n' elements of the array");
+		if(userInput < numbers.length) {
+			document.write(numbers.slice(numbers.length - userInput));
+		} else {
+			document.write(numbers.slice(0))
+		}
+	</script>
+</body>
+</html>

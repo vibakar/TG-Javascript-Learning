@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 01</title>
+</head>
+<body>
+	<h1>Assignment 01</h1>
+	<select id="select">
+		<option value="Apple">Apple</option>
+		<option value="Orange">Orange</option>
+		<option value="Mango">Mango</option>
+		<option value="Grapes">Grapes</option>
+	</select>
+	<script>
+		var element = document.getElementById("select");
+     	var val = "";
+		for (var i = 0; i < element.length; i++) {
+         val +=element[i].value + ",";
+      	}
+      	alert("The Dropdown list contains " + element.length + " items. The items are "+ val);
+	</script>
+</body>
+</html>

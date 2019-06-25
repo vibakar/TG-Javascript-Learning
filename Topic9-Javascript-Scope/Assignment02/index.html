@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 02</title>
+</head>
+<body>
+	<h1>Assignment 02</h1>
+	<script>
+		function binarySearch(arr, elem) {
+		   var pos = Math.floor(arr.length / 2);
+
+		   if (arr[pos] === elem){
+		      return pos;
+		   } else if (arr.length === 1) {
+		      return null;
+		   } else if (arr[pos] < elem) {
+		      var arr = arr.slice(pos + 1);
+		      var res = binarySearch(arr, elem);
+		      if (res === null) {
+		         return null;
+		      } else {
+		         return pos + 1 + res;
+		      }
+		   } else {
+		      var arr1 = arr.slice(0, pos);
+		      return binarySearch(arr1, elem);
+		   }
+		}
+
+	 	var arr = [10, 20, 30, 40, 50];
+	 	document.write(binarySearch(arr, 30));
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 03</title>
+	<style>
+		img {
+			width: 150px;
+			height: 150px;
+		}
+		.center {
+			text-align: center;
+		}
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Assignment 03</h1>
+	<div class="center">
+		<button id="prev" onclick="previous()">Previous</button>
+		<img src="img1.png" id="img" alt="image">
+		<button id="next" onclick="next()">Next</button>
+	</div>
+	<script>
+		var images = ['img1.png', 'img11.jpg', 'img2.jpg', 'img22.jpg', 'img3.jpg', 'img33.jpg'];
+		var currentIndex = 0;
+		var prev = document.getElementById("prev"); 
+		prev.classList.add("hide");
+		function previous() {
+			currentIndex--;
+			var prev = document.getElementById("prev"); 
+			if(currentIndex == 0) {
+				prev.classList.add("hide");
+			}
+			if(currentIndex < 5) {
+				var next = document.getElementById("next"); 
+				next.classList.remove("hide");
+			}
+			var element = document.getElementById("img"); 
+  			element.setAttribute("src", images[currentIndex]);
+		}
+
+		function next() {
+			currentIndex++;
+			var next = document.getElementById("next"); 
+			if(currentIndex == 5) {
+				next.classList.add("hide");
+			}
+			if(currentIndex >= 1) {
+				var prev = document.getElementById("prev"); 
+				prev.classList.remove("hide");
+			}
+			var element = document.getElementById("img"); 
+  			element.setAttribute("src", images[currentIndex]);
+		}
+	</script>
+</body>
+</html>
